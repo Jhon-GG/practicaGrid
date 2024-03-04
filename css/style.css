@@ -7,18 +7,84 @@
     box-sizing: content-box;
 }
 
+body{
+    background: var(--color-primary);
+}
+
 .container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "MacBookAir MacBookProApp MacBookProApp"
+    "MacBookAir MacBookProApp MacBookProApp"
+    "MacBookAirScreen MacBookAirScreen MacBookPro"
+    "MacBookAirScreen MacBookAirScreen MacBookPro"
+    ;
+    
+    grid-gap: 8px;
 
 
 
     width: 800px;
     height: 700px;
-    background: var(--color-secundar);
+
+    /* background: var(--color-secundary);
     border-radius: 5px;
     box-shadow: 3px 3px 5px var(--color-transparencia);
-    border: 1px solid var(--color-secundary);
+    border: 1px solid var(--color-secundary); */
     margin: 15px auto;
+
+}
+
+.container div{
+    border-radius: 8px;
+    /* border: 1px solid var(--color-secundary); */
+    background: var(--color-secundary);
+}
+
+.item1{
+    /* background-color: red; */
+    grid-area: MacBookAir;
+    /* grid-row: 1 / 3; */
+}
+
+.item2{
+    /* background-color: blue; */
+    grid-area: MacBookProApp;
+    /* grid-row: 1 / 3;
+    grid-column: 2 / 4; */
+
+}
+
+.item3{
+    grid-area: MacBookAirScreen;
+    /* grid-row: 3 / 5;
+    grid-column: 1 / 3;
+} */
+}
+.item4{
+    grid-area: MacBookPro;
+    /* background: green; */
+    /* grid-row: 3 / 5; */
+}
+
+@media( width < 800px){
+    /* .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr)
+    }
+
+    .container div{
+        grid-column: auto;
+        grid-row: auto;
+    } */
+    .container{
+        grid-template-areas:
+            "MacBookAir MacBookAir MacBookAir"
+            "MacBookProApp MacBookProApp MacBookProApp"
+            "MacBookAirScreen MacBookAirScreen MacBookAirScreen"
+            "MacBookPro MacBookPro MacBookPro"
+        ;
+    }
 }
