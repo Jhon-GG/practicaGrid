@@ -1,0 +1,24 @@
+@import url(variables.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: content-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+
+
+    width: 800px;
+    height: 700px;
+    background: var(--color-secundar);
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px var(--color-transparencia);
+    border: 1px solid var(--color-secundary);
+    margin: 15px auto;
+}
