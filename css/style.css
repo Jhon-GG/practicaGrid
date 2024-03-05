@@ -1,0 +1,99 @@
+@import url(variables.css);
+
+*{    
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: content-box;
+}
+
+body{
+    background: var(--color-fondo);
+}
+
+.container{
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+
+    grid-gap: 8px;
+
+    width: 80%;
+    margin:0 auto ;
+    height: 600px;
+}
+
+.container div{
+    border-radius: 8px;
+    background: var(--color-secundary);
+}
+
+.item1{
+    border: 2px solid red;
+    grid-row: 1  / 3;
+}
+
+.item2{
+    border: 2px solid rgb(13, 0, 255); 
+}
+
+.item3{
+    border: 2px solid rgb(234, 255, 0);
+}
+
+.item4{
+    border: 2px solid rgb(255, 166, 0);
+}
+
+.item5{
+    border: 2px solid rgb(64, 255, 0);
+}
+
+.item6{
+    border: 2px solid rgb(0, 255, 255);
+}
+
+.item7{
+    border: 2px solid rgb(102, 0, 255);
+}
+
+.item8{
+    border: 2px solid rgb(255, 0, 179);
+}
+
+.item9{
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.item10{
+    border: 2px solid rgb(104, 73, 23);
+}
+
+.item11{
+    border: 2px solid rgb(209, 114, 114);
+}
+
+.item12{
+    border: 2px solid rgb(144, 72, 174);
+}
+
+.item13{
+    border: 2px solid rgb(255, 119, 29);
+}
+
+.item14{
+    border: 2px solid rgb(0, 87, 6);
+}
+
+.item15{
+    border: 2px solid rgb(14, 0, 66);
+}
+
+.item16{
+    border: 2px solid rgb(125, 123, 0);
+}
+
+.item17{
+    border: 2px solid rgb(255, 0, 60);
+}
