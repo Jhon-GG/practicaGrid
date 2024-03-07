@@ -1,5 +1,6 @@
 @import url(variables.css);
 
+
 *{
     margin: 0;
     padding: 0;
@@ -13,6 +14,10 @@ body{
 
 .container{
     display: grid;
+    grid-gap: 8px;
+    width: 800px;
+    height: 700px;
+    margin: 15px auto;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas: 
@@ -21,64 +26,166 @@ body{
     "MacBookAirScreen MacBookAirScreen MacBookPro"
     "MacBookAirScreen MacBookAirScreen MacBookPro"
     ;
-    
-    grid-gap: 8px;
-
-
-
-    width: 800px;
-    height: 700px;
-
-    /* background: var(--color-secundary);
-    border-radius: 5px;
-    box-shadow: 3px 3px 5px var(--color-transparencia);
-    border: 1px solid var(--color-secundary); */
-    margin: 15px auto;
 
 }
 
 .container div{
     border-radius: 8px;
-    /* border: 1px solid var(--color-secundary); */
     background: var(--color-secundary);
 }
 
+
 .item1{
-    /* background-color: red; */
     grid-area: MacBookAir;
-    /* grid-row: 1 / 3; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
 }
 
-.item2{
-    /* background-color: blue; */
-    grid-area: MacBookProApp;
-    /* grid-row: 1 / 3;
-    grid-column: 2 / 4; */
+.card {
+    color: #e66e53; 
+}
 
+.air {
+    color: rgb(0, 0, 0); 
+}
+
+
+.mo {
+    text-align: center; 
+}
+
+
+.mo {
+    text-align: center; 
+}
+
+.edu {
+    color: rgb(68, 75, 68); 
+}
+
+
+.item1 img,
+.item1 p,
+.item1 b {
+    display: block;
+    margin-bottom: 10px; 
+}
+
+
+
+
+.item2{
+    grid-area: MacBookProApp;
+   
+}
+
+.item2 b{
+    display: flex;
+    flex-direction: column;
+}
+
+.item2 img{
+    margin-left: 118px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: flex-end;
+    width: 77%;
+    height: 77%;
+    position: relative;
+}
+
+.pro{
+    margin-top: 30px;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+.major{
+    margin-top: 15px;
+    margin-left: 30px;
+    font-size: 25px;
 }
 
 .item3{
     grid-area: MacBookAirScreen;
-    /* grid-row: 3 / 5;
-    grid-column: 1 / 3;
-} */
+    
 }
+
+.item3 b{
+    display: flex;
+    flex-direction: column;
+}
+
+.item3 img{
+    display: flex;
+    width: 75%;
+    height: 75%;
+    margin: 10px 0 0 65px;
+
+}
+
+.macbook{
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.big{
+    font-size: 25px;
+    margin-top: 0px;
+    margin-left: 30px;
+}
+
 .item4{
     grid-area: MacBookPro;
-    /* background: green; */
-    /* grid-row: 3 / 5; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
 }
 
-@media( width < 800px){
-    /* .container{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr)
-    }
+.gift {
+    color: #e66e53; 
+}
 
-    .container div{
-        grid-column: auto;
-        grid-row: auto;
-    } */
+.macbookPro {
+    color: rgb(0, 0, 0); 
+}
+
+
+.price {
+    text-align: center; 
+}
+
+
+.price{
+    text-align: center; 
+}
+
+.disc{
+    color: rgb(68, 75, 68); 
+}
+
+.pequena {
+    width: 260px; 
+    height: 130px; 
+}
+
+.item4 img,
+.item4 p,
+.item4 b {
+    display: block;
+    margin-bottom: 10px; 
+}
+
+
+
+@media( width < 800px){
+    
     .container{
         grid-template-areas:
             "MacBookAir MacBookAir MacBookAir"
